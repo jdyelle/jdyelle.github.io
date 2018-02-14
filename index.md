@@ -1,7 +1,5 @@
-# Elasticsearch Monitor
+# Welcome
 
-It's my intention to create a few neat tools here for ElasticSearch but first we need to make the environment.  I'm going to do a series of tutorials on how to set things up, and if you don't have a lot of experience with ElasticSearch then using these tools as a guide should give you a running start to be a bit more comfortable with Elastic.
+I've been writing code and documentation for a few years, but I'm just getting started uploading things to Github.  For now, I'm going to start with a few tutorials on setting up linux, elasticsearch, etc.  I've been looking for a good format for a technical blog for a while but I don't really like any of the things CMSs offer, they're either too much or too little.  It looks like Github Pages and the simplicity of markdown may be a sweet spot that I can work with.
 
-As this project matures, I'll post writeups on how to use these projects.
-
-Please head over to the [Tutorials](./Tutorials/) section to see how it's coming along.
+For now, please head over to the [Tutorials](./Tutorials/) section to see how it's coming along.
