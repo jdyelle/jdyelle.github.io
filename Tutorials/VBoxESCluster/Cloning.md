@@ -107,7 +107,7 @@ shutdown -h now
 
 ## ESNode1
 
-Last time we left ESNode1, the ElasticSearch service wasn't configured to start up automatically.  Let's start ESNode1 back up and log in as *root*.  Let's enable ElasticSearch autostart, and start the service.
+Last time we left ESNode1, the ElasticSearch service wasn't configured to start up automatically.  Let's start ESNode1 back up and log in as *root*.  Then we can enable ElasticSearch autostart, and start the service.
 
 ````
 systemctl enable elasticsearch.service
@@ -122,7 +122,7 @@ Start up the other two VMs and after a few minutes of boot time, we should see t
 Here's where the *Linked Clone* feature of VirtualBox really saves us a lot of disk space.  If I right click on my VMs Directory and Click Properties, the *total* space for all VMs is under 2.5GB.  By cloning the VM after we had installed the OS, updates, and Elastic files, we save a lot of space that would be otherwise duplicated.
 ![VM Cloning](Screenshots/d_VM05.png)
 
-After a few minutes, the ElasticSearch service should start and allow us to connect.  You can navigate to http://192.168.254.251:9200 to get a basic ElasticSearch welcome page, but I like the stats printout better because I can see the individual nodes. To access this, you can navigate to http://192.168.254.251:9200/_nodes/stats or http://192.168.254.251:9200/_nodes/ to see some interesting statistics about the cluster.
+After a few minutes, the ElasticSearch service should start and allow us to connect.  You can navigate to `http://192.168.254.251:9200` to get a basic ElasticSearch welcome page, but I like the stats printout better because I can see the individual nodes. To access this, you can navigate to `http://192.168.254.251:9200/_nodes/stats` or `http://192.168.254.251:9200/_nodes/` to see some interesting statistics about the cluster.
 ![VM Cloning](Screenshots/d_VM07.png)
 
 Congratulations, if you have the nodes responding then you can use ElasticSearch at those addresses! As a side note, if you're going to use this as a development cluster I'd recommnd not having too many index replicas since they'll all be on the same host hard disk anyway -- save yourself the space.  
