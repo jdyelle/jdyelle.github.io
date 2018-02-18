@@ -3,7 +3,7 @@
 Finally we are ready to install ElasticSearch on our Linux VM.  We have a few configuration changes to do on the operating system before installing Elastic so let's get started.
 
 The first thing I'm going to do (since I'm not a fan of the NetworkManager platform) is uninstall it.  This is completely optional since generally NetworkManager won't get in the way, but I like manually managing my interfaces.
-![VM Configuration](Screenshots/c_ES01.PNG)
+![ES Configuration](Screenshots/c_ES01.PNG)
 
 We have a few administrative commands to start with before we get to installing Elastic.  Let's start by updating the operating system packages to the most recent version.  This will take a few minutes to install:
 
@@ -25,7 +25,7 @@ Now we are going to install ElasticSearch.  The easiest way to do this is to go 
 yum install https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.1.2.rpm
 ````
 
-![VM Configuration](Screenshots/c_ES02.PNG)
+![ES Configuration](Screenshots/c_ES02.PNG)
 
 So we have ElasticSearch installed, but haven't started it yet.  Before we start it up for the first time, let's change some configuration options and set up the rest of the networking and tell ElasticSearch to use the disk partitions that we've set aside for it.  Let's start by modifying the owner of the partition directory to the ElasticSearch user and changing the Linux Firewall to allow traffic on the standard ElasticSearch ports:
 
@@ -36,7 +36,7 @@ firewall-cmd --permanent --add-port=9300/tcp
 ````
 
 Now we'll edit /etc/hosts and add the addresses (both public and private) for our VM cluster configuration.  In the screenshot below, I am using the .lan suffix for the private cluster addresses.  You will see why this is useful when we configure the elasticsearch.yml file later.
-![VM Configuration](Screenshots/c_ES03.PNG)
+![ES Configuration](Screenshots/c_ES03.PNG)
 
 ````
 vi /etc/hosts
@@ -58,18 +58,19 @@ vi /usr/lib/systemd/system/elasticsearch.service
 
 In the screenshot I've provided, those lines are right above my cursor.
 
-![VM Configuration](Screenshots/c_ES05.PNG)
+![ES Configuration](Screenshots/c_ES05.PNG)
 
 On to the ElasticSearch configuration files.  I'll give a brief rundown of each of the options here:
 
 ````
-vi /etc/elasticsearch/elasticsearch.yml 
+vi /etc/elasticsearch/elasticsearch.yml
  cluster.name: ESCluster
  node.name: ESNode1
  network.bind_host: ["192.168.253.251","192.168.254.251","127.0.0.1"]
  network.publish_host: 192.168.253.251
  path.data: /elasticsearch/data
  path.logs: /elasticsearch/logs
+ bootstrap.memory_lock: true
  discovery.zen.ping.unicast.hosts: ["ESNode1.lan", "ESNode2.lan", "ESNode3.lan"]
  discovery.zen.minimum_master_nodes: 2
  gateway.recover_after_nodes: 2
@@ -81,6 +82,7 @@ vi /etc/elasticsearch/elasticsearch.yml
 * network.publish_host -- This is the network host that you want to pass cluster traffic on
 * path.data -- The filesystem path for the node datafiles
 * path.logs -- The filesystem path for the log datafiles
+* bootstrap.memory_lock -- Lock ElasticSearch into main memory (not as important when we don't have swap space anyway)
 * discovery.zen.ping.unicast.hosts -- This is a list of hosts to check in with when starting up
 * discovery.zen.minimum_master_nodes -- Configure number of nodes required for quorum
 * gateway.recover_after_nodes -- Require this many nodes to start the cluster
