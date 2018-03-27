@@ -1,6 +1,6 @@
 # Using Nginx with ElasticSearch
 
-In this tutorial we'll talk about how useful Nginx is with ElasticSearch.  There's an excellent (although long) guide to using a few of the more advanced options of Nginx with Elastic but we aren't going to get into all of that -- let's just start simple.
+In this tutorial we'll talk about how useful Nginx is with ElasticSearch.  There's an excellent (although long) guide to using a few of the more advanced options of Nginx with Elastic on [Karel's post on Nginx tricks](https://www.elastic.co/blog/playing-http-tricks-nginx) but we aren't going to get into all of that -- let's just start simple.
 
 There are a few ways we can use Nginx -- to enforce endpoint security (either authentication, authorization or encryption), to act as a load balancer, or if you just want a simple way to log requests that come into ElasticSearch.  Most people use Nginx in a combination of these ways.
 
@@ -71,11 +71,11 @@ Redirecting to /bin/systemctl start nginx.service
 Let's test this with a connection from our browser.  Notice there's no port number on the end of it so it's just using standard http ports and Nginx is proxying the request to the local Elastic service:
 ![Nginx Proxy](Screenshots/01nginx_proxy.png)
 
-This means that we can use Nginx to manage authentication, encryption or authorization to our Elastic node, and protect the API from unauthorized access on the LAN.
+This means that we can use Nginx to manage connections to Elastic, and add authentication, encryption or authorization to our Elastic node.  I'll get into client certs a bit later in the tutorial but if basic http authentication is all you're looking for, you can set that up to use a .htpasswd file for node authentication.
 
 ## Using Nginx as an SSL Load Balancer
 
-Let's take this another direction now -- what if your Elastic nodes were on a segregated subnet or VLAN and you wanted to use Nginx as a gateway or load balancer for that subnet?  No problem!  First, I'm going to change the `elasticsearch.yml` file back to having an address on the public LAN, just to illustrate that we can use its address for load balancing.  Then I'm going to add the other hosts to the `upstream` section of the nginx.conf file:
+What if your Elastic nodes were on a segregated subnet or VLAN and you wanted to use Nginx as a gateway or load balancer for that subnet?  No problem!  First, I'm going to change the `elasticsearch.yml` file back to having an address on the public LAN, just to illustrate that we can use its address for load balancing.  Then I'm going to add the other hosts to the `upstream` section of the nginx.conf file:
 
 ````
 [root@ESNode1 ~]# vi /etc/elasticsearch/elasticsearch.yml
@@ -104,9 +104,7 @@ Now, go back to your browser and refresh it a couple of times.  Notice how Nginx
 
 ![Nginx Load Balancing](Screenshots/02nginx_loadbalancer.png)
 
-Ok now let's get really fancy.  Maybe not as fancy as [Karel's post on Nginx tricks](https://www.elastic.co/blog/playing-http-tricks-nginx) because this is just a beginning proof-of-concept thing, but still... let's take a crack at building some authentication.
-
-First, let's generate some ssl keys.  We're doing this in test.  Please promise me you won't use self-signed keys for the servers on your production cluster.  But for the purposes of this tutorial, we're going to do it.  It might be easier to not use self-signed keys with the amount of questions that OpenSSL asks for metadata anyway (I kid, I kid.)
+Ok now let's get fancy and authenticate with SSL. First, let's generate some ssl keys.  We're doing this in test.  Please promise me you won't use self-signed keys for the servers on your production cluster.  For the purposes of this tutorial, it will demonstrate our concept.
 
 ````
 [root@ESNode1 ~]# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
@@ -156,7 +154,7 @@ Redirecting to /bin/systemctl restart nginx.service
 Let's try the HTTPS connection in the browser... and of course it's an unknown certificate error!
 ![Unknown Cert](Screenshots/03nginx_ssl1.png)
 
-Which is great because it means everything is working properly.  If you add this exception it will look like the previous screenshots with the Elastic welcome page.  
+Which is great because it means everything is working properly.  If you add this exception it will look like the previous screenshots with the Elastic welcome page.
 
 ## Forcing Client Authentication with SSL Certificates
 
