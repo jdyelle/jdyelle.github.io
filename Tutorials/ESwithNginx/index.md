@@ -75,20 +75,20 @@ This means that we can use Nginx to manage connections to Elastic, and add authe
 
 ## Using Nginx as an SSL Load Balancer
 
-What if your Elastic nodes were on a segregated subnet or VLAN and you wanted to use Nginx as a gateway or load balancer for that subnet?  No problem!  First, I'm going to change the `elasticsearch.yml` file back to having an address on the public LAN, just to illustrate that we can use its address for load balancing.  Then I'm going to add the other hosts to the `upstream` section of the nginx.conf file:
+What if your Elastic nodes were on a segregated subnet or VLAN and you wanted to use Nginx as a gateway or load balancer for that subnet?  No problem!  Let's add the other hosts to the `upstream` section of the nginx.conf file:
 
 ````
 [root@ESNode1 ~]# vi /etc/elasticsearch/elasticsearch.yml
 [root@ESNode1 ~]# vi /etc/nginx/nginx.conf
 ````
 
-I've added 192.168.254.251 back to the `network.bind_host` property, and we can change the `upstream` section of nginx.conf to look like this:
+We can change the `upstream` section of nginx.conf to look like this:
 
 ````
     upstream elasticsearch {
-        server 192.168.254.251:9200;
-        server 192.168.254.252:9200;
-        server 192.168.254.253:9200;
+        server 192.168.253.251:9200;
+        server 192.168.253.252:9200;
+        server 192.168.253.253:9200;
         keepalive 15;
     }
 ````
@@ -104,7 +104,9 @@ Now, go back to your browser and refresh it a couple of times.  Notice how Nginx
 
 ![Nginx Load Balancing](Screenshots/02nginx_loadbalancer.png)
 
-Ok now let's get fancy and authenticate with SSL. First, let's generate some ssl keys.  We're doing this in test.  Please promise me you won't use self-signed keys for the servers on your production cluster.  For the purposes of this tutorial, it will demonstrate our concept.
+If we take the public LAN network addresses out of `elasticsearch.yml` for all nodes, then ElasticSearch won't bind to those addresses, and connections via HTTP or Transport won't be accepted. That way, we've restricted traffic to the private network and can only access it through Nginx.
+
+Ok now let's get fancy and add SSL to the mix. First, let's generate some ssl keys.  We're doing this in test.  Please promise me you won't use self-signed keys for the servers on your production cluster.  For the purposes of this tutorial, it will demonstrate our concept.
 
 ````
 [root@ESNode1 ~]# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
