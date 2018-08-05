@@ -15,6 +15,7 @@ network.bind_host: ["192.168.253.251","192.168.254.251"]
 ````
 
 We can change this to listen on the private network and the local loopback adress:
+
 ````
 network.bind_host: ["192.168.253.251","127.0.0.1"]
 ````
@@ -126,6 +127,7 @@ Verifying - Enter Export Password:
 Why didn't I use the same cert for the client cert as I did for the self-signed server cert?  I could have.  That would be *really* bad for security, because then whoever wanted to connect could just download the server cert and use it to connect back to the server as an authenticated person.  We're already breaking a lot of rules by using a self signed cert but that would just be ridiculous.
 
 Let's edit our nginx.conf file to use the SSL certs we just generated.
+
 ````
     server {
         listen       80 default_server;
