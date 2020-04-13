@@ -29,6 +29,6 @@ Just to give some hardware context, I'll be running this ES Cluster (and Kibana)
 
 This level of hardware isn't out of reach if you're just making a VM or running a docker from your laptop.
 
-Once you're there, let's move on to [Downloading Citibike Data](./Mapping).
+Once you're there, let's move on to [Downloading Public Bike Trip Data](./Mapping).
 
 
