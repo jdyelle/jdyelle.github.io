@@ -1,6 +1,6 @@
 # Build and save some visualizations
 
-Now it's time to finally have some fun with the data.  I'd like to thank you for making it to this part -- here's the part we've been trying to get to for the whole series.  If I've direct linked you to this page, on the previous pages we've identified our data (all ~80 million rows of it), created an index mapping, downloaded a CSV parser, uploaded our data, and told Kibana how to use it.  This page is going to get into building visualizations in Kibana using Elasticsearch.
+Now it's time to finally have some fun with the data.  I'd like to thank you for making it to this part -- this is what we've been building towards.  If I've direct linked you to this page, on the [previous pages](./index) we've identified our data (all ~80 million rows of it), created an index mapping, downloaded a CSV parser, uploaded our data, and told Kibana how to use it.  This page is going to get into building visualizations in Kibana using Elasticsearch.
 
 Let's start with something simple -- a bar chart.  Open up the Kibana interface and the second button down on the left hand side should be "Visualize".  Let's chose a Vertical Bar.
 
