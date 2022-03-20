@@ -1,0 +1,26 @@
+yum -y update
+yum install docker
+sudo groupadd docker
+sudo usermod {user} -aG docker
+chkconfig docker on
+service docker restart
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+./systemd/system/multi-user.target.wants/docker-compose-{software}.service:
+# /etc/systemd/system/docker-compose-{software}.service
+
+[Unit]
+Description=Docker Compose Excecution Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/software/software-docker-2.1.2
+ExecStart=/usr/local/bin/docker-compose -f /opt/software/software-docker-2.1.2/docker-compose.yml start
+ExecStop=/usr/local/bin/docker-compose -f /opt/software/software-docker-2.1.2/docker-compose.yml stop
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
