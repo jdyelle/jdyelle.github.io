@@ -1,3 +1,7 @@
+---
+title: Tutorials and Walkthroughs
+description: Step-by-step Elasticsearch, Kibana, and Nginx tutorials by Jeremy Yelle.
+---
 # Tutorials and Walkthroughs
 
 ## Elasticsearch Tutorials

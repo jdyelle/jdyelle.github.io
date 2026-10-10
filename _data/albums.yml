@@ -1,0 +1,7 @@
+# Shared photo albums shown on the Adventures page.
+# Fields: title, url, dates, description, icon (emoji)
+- title: Bike Stuff
+  url: https://photos.app.goo.gl/bBoGpgJ16oNwhWXV9
+  dates: May 2022 - Aug 2026
+  description: Rides, trails, and bikes, in the order they happened.
+  icon: "🚵"

@@ -1,0 +1,104 @@
+highlights:
+  - "20+ years architecting and leading teams building scalable systems on AWS, with recent focus on GenAI and serverless technologies such as Anthropic models on Bedrock, AgentCore, Lambda, Step Functions, EventBridge and DynamoDB."
+  - "Experience embedding AI as actors into workflows, building vector store and RAG pipelines, chunking and knowledge strategies, and using tool calls for deterministic, structured output."
+  - "Leveraging AI/LLM tools (Copilot, Claude Code, Amazon Q / Kiro) to accelerate development velocity and team productivity while maintaining code quality and architectural integrity."
+  - "Expert in translating business requirements into phased technical delivery that scales, with proven ability to secure funding and executive alignment, and executing on the approach."
+  - "Evangelist for vertical slice architecture and domain driven design; skilled at mentoring teams through computer science concepts and applying them to architectural transformation."
+  - "Mastery across data storage types and streaming architectures for high-performance, resilient systems."
+  - "Relationship builder across engineering, product, and leadership to reduce complexity, improve collaboration, and drive operational excellence."
+
+jobs:
+  - org: Caylent
+    location: Remote
+    title: Senior Transformation Architect, Presales
+    dates: May 2026 - Present
+    summary: "Worked with sales leadership to engage product and technology executives and build reference designs for engagements of every size, from small six-week RAG chatbot exercises to large, multi-workstream, six-month agentic workflow programs with multiple knowledge bases. Responsible for building trust, gathering requirements, scoping engagements, and writing proposals and Statements of Work, with a focus on software modernization, cloud adoption, and AI-DLC."
+    bullets:
+      - "Responsible for building, prototyping and evangelizing emergent AWS technologies in the GenAI space, specifically Amazon Connect, Bedrock, and Application Modernization offerings."
+      - "Provided code analysis assessments for modernization of legacy .NET and SQL workloads onto AWS, with a phased approach to reduce risk and cost."
+      - "Defined repeatable paths for taking apps built on Supabase and Vercel to production-grade AWS infrastructure."
+      - "Designed event-driven and agentic workflows on Bedrock, Step Functions, and Fargate to automate business processes with AI."
+      - "Scoped cloud foundation conversations with Control Tower landing zones for regulated environments such as higher education, GovCloud, and financial services."
+      - "Introduced new delivery models, including AI-DLC with Kiro and Claude Code adoption to ship features with GenAI tools."
+    tags: [AWS, Bedrock, Agentic AI, Modernization, Presales]
+
+  - org: Caylent
+    location: Remote
+    title: Senior Software Architect, Serverless Apps
+    dates: February 2024 - April 2026
+    summary: "Consultant for fintech and healthcare clients modernizing existing SaaS stacks. Set technical direction and managed customer expectations on multiple engagements, working closely with client teams on requirements, scoping, delivery, and knowledge transfer. Actively shaped team culture by leading an ERG, mentoring teammates on their career journeys, and writing blog posts for marketing."
+    bullets:
+      - "Deployed a GenAI knowledge center and chatbot app to production using Amazon Bedrock, Titan Embeddings, and a multi-stage structured chunking ingestion pipeline built with Textract and Python."
+      - "Created a transactional data simulator for an FDIC compliance application that used LLM-based statistical modeling to produce synthetic data for hundreds of millions of daily bank account activities."
+      - "Delivered a reusable multi-tenant dependency injection framework and management app for AWS Step Functions, letting multiple tenants reuse existing artifacts and ops teams manage scheduling without complex IaC pipeline changes."
+      - "Led engineering teams in moving legacy scheduled tasks to Lambda and EventBridge, cutting the cost of periodic tasks by over 90%."
+      - "Migrated an HP 3000 mainframe system from file-based source control and job scheduling to GitHub and AWS CodeDeploy, with comprehensive staff training and documentation."
+      - "Provided thought leadership with an account executive for one of Caylent's top 10 accounts, growing the portfolio to nearly $4M in work expansion and renewals as a technical strategist."
+    tags: [Serverless, Lambda, Step Functions, RAG, FinTech, Healthcare]
+
+  - org: FormAssembly
+    location: Remote
+    title: Software Architect / Developer Advocate
+    dates: August 2022 - November 2023
+    summary: "Set technical direction and best practices for the software engineering org. Worked closely with product and operations leadership to provide sustainable feature designs and find the best code ROI for a given feature."
+    bullets:
+      - "Led team members 1:1 and in groups to foster innovation and a collaborative culture, improving the engineering team's eNPS over the year."
+      - "Brought the engineering org to consensus on a style guide, which cut code review times from weeks to hours and gave modernization a path forward."
+      - "Reduced cloud costs by guiding AWS infrastructure choices and evangelizing the Well-Architected Framework across S3, DynamoDB, OpenSearch, Step Functions, and Fargate."
+      - "Created a Node.js microservice repository template with an npm package for uniform delivery and updates, using Koa.js, TypeScript with JTD validation, and OpenTelemetry tracing."
+      - "Improved database responsiveness from multiple minutes to a few seconds on MySQL and Elasticsearch through performance tuning and data lifecycle management."
+      - "Coached Domain Driven Design, REST API design, data structures, object oriented design, authorization access patterns, and other computer science concepts."
+    tags: [AWS, Node.js, TypeScript, OpenTelemetry, Elasticsearch, DDD]
+
+  - org: Thomson Reuters
+    location: Remote
+    title: Architect, Cloud Transformation
+    dates: January 2019 - July 2022
+    summary: "Responsible for technical architecture and the cloud transition of the Global Trade Management project: interviewing and mentoring associate architects, reviewing and approving REST APIs, and managing vendor relationships for product components (AWS OpenSearch, Elastic Cloud, Basis Tech)."
+    bullets:
+      - "Initiated a $200k/year vendor relationship with Elastic Cloud and managed the full onboarding process, including vendor, security, and architecture reviews."
+      - "Created software designs and technical documentation to decompose a monolith using domain driven design and vertical slice architecture, securing project funding from the segment CTO."
+      - "Created capability maps and mentored twelve agile teams (~200 staff) on domain driven design, microservice design, data architecture and C4 models, acting as liaison to the TR global architecture board and principal executive architects."
+      - "Led a team re-engineering an MS SQL Server database to Elasticsearch, increasing service capacity by 1800x while reducing license and infrastructure costs."
+      - "Created a streaming telemetry stack in C# deployed with CloudFormation, leveraging Elasticsearch to cut average case resolution time by 40 minutes for helpdesk engineers."
+      - "Increased data resiliency and cut cost by 75% by moving a 10TB binary artifact repository from clustered MS SQL Server databases to AWS S3."
+    tags: [Elasticsearch, DDD, C4, CloudFormation, S3, .NET]
+
+  - org: Integration Point
+    location: Rochester, NY
+    title: Services and Data Architect
+    dates: January 2010 - December 2018
+    summary: "Responsible for foundational platform transformation, microservice design, greenfield development, and integration of bleeding edge technologies (NoSQL databases, event driven architecture, and data engineering best practices) with the main SaaS web application."
+    bullets:
+      - "Built a .NET microservice and client library to file regulatory documents with US Customs and Border Protection via WebSphere MQ, coding from a published XML spec."
+      - "Built a multi-terabyte binary object store as a microservice with searchable metadata and tagging, with sub-50ms response time across 100 million documents."
+      - "Built an event sourcing microservice and client library in .NET, similar to RabbitMQ, that enabled event driven architecture across the platform."
+      - "Introduced a visual workflow tool for configuring the event service and building business processes from events. Created the concept, gathered executive support, managed development resources, and delivered it over multiple phases."
+      - "Built a Kafka-inspired streaming telemetry platform on a timeseries MS SQL database, using hashed timestamps as a clustered index and the bulk API for speed."
+      - "Modernized source control and issue tracking by moving the team from Visual SourceSafe to TFS 2012 with Git, and later Azure DevOps, retooling the SDLC to match."
+      - "Ran PoCs for data analytics and BI tools, and selected Elasticsearch with Kibana dashboards as the best fit for dynamic queries over multi-billion record datasets."
+    tags: [.NET, Event Sourcing, Microservices, Elasticsearch, SQL Server]
+
+  - org: Homedata Rochester Inc
+    location: Rochester, NY
+    title: Data Center Manager
+    dates: July 2002 - December 2009
+    summary: "Responsible for the entire datacenter initiative, including budget, staffing, and vendors, and worked with clients to manage databases and infrastructure for behind-the-firewall installations."
+    bullets:
+      - "Managed the datacenter budget and all associated vendor relationships and contract negotiations."
+      - "Managed and mentored a team of administrators and developers."
+      - "Set policies for datacenter best practices, backups, and security requirements."
+      - "Implemented and maintained a number of databases (Oracle 8.1-11.1)."
+      - "Created a hybrid datacenter combining Windows (Active Directory) and Linux (RHEL)."
+      - "Engaged clients as an Oracle consultant and system architecture expert, using analysis skills to solve problems in implementations of our software and Oracle environments."
+      - "Implemented remote developer environments (VPN, VoIP, Remote Desktop Server, Subversion, Trac)."
+      - "Owned debugging of the software quality pipeline and DevOps for builds and releases."
+    tags: [Oracle, Active Directory, RHEL, Datacenter, Team Leadership]
+
+education:
+  - "Completed coursework in Physics and Optical Engineering (1998-2001), University of Rochester, Rochester NY"
+
+certifications:
+  - "Microsoft Certified Professional (1998)"
+  - "Amazon Cloud Essentials (2023)"
+  - "Anthropic Claude Certified Foundations (2026)"

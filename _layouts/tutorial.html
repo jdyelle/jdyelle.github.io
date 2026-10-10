@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="wrap page narrow">
+  {%- unless page.url == '/Tutorials/' %}
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/Tutorials/' | relative_url }}">&larr; All tutorials</a>
+  </nav>
+  {%- endunless %}
+  <div class="prose tutorial">
+    {{ content }}
+  </div>
+</article>

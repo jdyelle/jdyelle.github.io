@@ -1,0 +1,10 @@
+# Trail log: add one entry per trip or ride. Photos go in assets/img/adventures/.
+# Fields: title, place, date (YYYY-MM-DD), category, image (optional), caption.
+#
+# - title: Fall colors loop
+#   place: Somewhere in the Finger Lakes
+#   date: 2026-10-04
+#   category: Mountain biking
+#   image: /assets/img/adventures/fall-loop.jpg
+#   caption: A sentence or two about the ride.
+[]

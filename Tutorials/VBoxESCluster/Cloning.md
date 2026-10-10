@@ -129,4 +129,4 @@ Congratulations, if you have the nodes responding then you can use ElasticSearch
 
 I hope you found this tutorial helpful -- if you can think of a way that I could improve it, or if you find an issue please leave me an issue on GitHub so that I can get it fixed ASAP.
 
-Here's a link back to the main [Tutorials Page](..\index.html)
+Here's a link back to the main [Tutorials Page](../)

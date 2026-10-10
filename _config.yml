@@ -1,1 +1,46 @@
-theme: jekyll-theme-cayman
+title: Jeremy Yelle
+tagline: Cloud and AI architect, mentor, and mountain biker from Rochester, NY
+description: Personal site of Jeremy Yelle, a software and cloud architect focused on AWS, serverless, and GenAI. CV, projects, tutorials, and a look at life outside work.
+url: https://jeremy.yelle.dev
+lang: en
+
+author:
+  name: Jeremy Yelle
+  location: Rochester, NY
+  email: jeremy.yelle@gmail.com
+  linkedin: jeremyyelle
+  github: jdyelle
+  avatar: /assets/img/avatar.jpg
+
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+nav:
+  - title: About
+    url: /about/
+  - title: CV
+    url: /cv/
+  - title: Projects
+    url: /projects/
+  - title: Adventures
+    url: /adventures/
+  - title: Tutorials
+    url: /Tutorials/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: "Tutorials"
+    values:
+      layout: tutorial
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
