@@ -12,7 +12,7 @@ Over the last 20+ years that's meant building event-driven platforms and object 
 
 ## How I work
 
-I like to translate business requirements into phased delivery that actually ships, and to leave teams stronger than I found them. Mentoring, writing style guides, and teaching computer science concepts like domain driven design are some of the most rewarding parts of the job for me. That carries over to my volunteer work as a [mountain bike coach with ROOTZ]({{ '/projects/' | relative_url }}#community), where I get to practice developing beginners in a very different setting.
+I like to translate business requirements into phased delivery that actually ships, and to leave teams stronger than I found them. I try to be the kind of teammate who brings a coaching mentality to the work: sharing what I know, asking good questions, and celebrating other people's wins. Writing style guides and teaching computer science concepts like domain driven design are some of the most rewarding parts of the job for me. That carries over to my volunteer work as a [mountain bike coach with ROOTZ]({{ '/projects/' | relative_url }}#community).
 
 I'm also a fan of using AI tools (Copilot, Claude Code, Kiro) to move faster, as long as code quality and architectural integrity don't pay the price.
 
@@ -33,7 +33,6 @@ Head over to [Adventures]({{ '/adventures/' | relative_url }}) for more.
     <ul>
       <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me noopener">LinkedIn</a></li>
       <li><a href="https://github.com/{{ site.author.github }}" rel="me noopener">GitHub</a></li>
-      <li><a href="mailto:{{ site.author.email }}">Email</a></li>
     </ul>
   </div>
   <div class="aside-card" style="margin-top:1.25rem">

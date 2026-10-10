@@ -10,7 +10,7 @@ permalink: /projects/
     <h3>ROOTZ youth mountain bike program: volunteer coach</h3>
     <div class="meta">USA Cycling club &middot; Victor, NY</div>
     <p>I volunteer as a mountain bike coach with ROOTZ, a club that helps youth riders (6+) and beginner adults build confidence and skills on the trail. We ride Wednesday evenings from May through July, with a simple rule: always ride together, never alone.</p>
-    <p>Coaching new riders has sharpened how I develop less senior engineers. Break a big skill into small, repeatable pieces, make it safe to try something hard and fall down, and celebrate the first time someone clears the root that stopped them last week.</p>
+    <p>Coaching new riders has shaped how I show up as a teammate. Break a big skill into small, repeatable pieces, make it safe to try something hard and fall down, and celebrate the first time someone clears the root that stopped them last week. I try to bring that same coaching mentality to my teams.</p>
     <span class="more">Learn more about ROOTZ &nearr;</span>
   </a>
 </section>
@@ -35,14 +35,6 @@ permalink: /projects/
     <p>Hands-on walkthroughs for building an Elasticsearch cluster in VirtualBox, securing it with Nginx, and exploring data in Kibana.</p>
     <ul class="chips"><li>Elasticsearch</li><li>Kibana</li><li>Nginx</li><li>VirtualBox</li></ul>
     <a class="more" href="{{ '/Tutorials/' | relative_url }}">Read the tutorials &rarr;</a>
-  </div>
-  <div class="card">
-    <h3>Field notes</h3>
-    <p>Short, practical notes from my own setups.</p>
-    <ul>
-      <li><a href="{{ '/Notes/centos_stream_9_kubernetes.txt' | relative_url }}">Kubernetes on CentOS Stream 9 with cri-o</a></li>
-      <li><a href="{{ '/Notes/docker_compose_autostart.txt' | relative_url }}">Docker Compose autostart</a></li>
-    </ul>
   </div>
 </div>
 </section>

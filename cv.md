@@ -5,7 +5,6 @@ permalink: /cv/
 ---
 <p class="cv-actions btn-row">
   <a class="btn" href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me noopener">View on LinkedIn</a>
-  <a class="btn ghost" href="mailto:{{ site.author.email }}">Get in touch</a>
   <a class="btn ghost" href="javascript:window.print()">Print / Save as PDF</a>
 </p>
 
