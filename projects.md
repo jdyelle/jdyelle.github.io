@@ -44,13 +44,11 @@ permalink: /projects/
 <div class="grid">
   <div class="card">
     <h3>Home Dock USA</h3>
-    <div class="meta">2025</div>
     <p>Managed the DevOps environment for protected branches and release stability, using VMs, GitHub self-hosted runners, PostgreSQL utilities, and Docker (Supabase images), and provided general LLM assistance to the development team.</p>
     <ul class="chips"><li>DevOps</li><li>GitHub Runners</li><li>PostgreSQL</li><li>Docker</li><li>Supabase</li></ul>
   </div>
   <div class="card">
     <h3><a href="https://rocdev.org/" rel="noopener">RocDev talk: Geospatial analytics with Elasticsearch</a></h3>
-    <div class="meta">December 2019</div>
     <p>Used NYC Citi Bike data to show off Elasticsearch's geospatial analytics, with walkthroughs of Kibana as a visualization and data science tool, presented to the RocDev community. The talk became my <a href="{{ '/Tutorials/BikeDataViz/' | relative_url }}">bike share tutorial</a>.</p>
     <ul class="chips"><li>Public speaking</li><li>Elasticsearch</li><li>Kibana</li></ul>
   </div>

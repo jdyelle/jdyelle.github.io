@@ -168,6 +168,7 @@ a:hover { color: var(--accent); }
   padding: 1.35rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: .5rem;
 }
 .card h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
+.prose .card h3 { margin: 0; }
 .card h3 a { color: inherit; text-decoration: none; }
 .card h3 a:hover { color: var(--accent); }
 .card p { margin: 0; color: var(--muted); font-size: .97rem; }
@@ -244,6 +245,9 @@ pre code { background: none; padding: 0; }
 
 /* Adventures */
 .pillars { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card.photo { padding: 0; overflow: hidden; gap: 0; }
+.card.photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: 0; border-radius: 0; margin: 0; box-shadow: none; }
+.card.photo .body { padding: 1.1rem 1.35rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
 .gallery { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 .shot { margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
 .shot img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 0; border-radius: 0; margin: 0; box-shadow: none; }

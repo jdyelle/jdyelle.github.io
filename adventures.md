@@ -4,20 +4,26 @@ lede: Work is a big part of my life, but it isn't all of it. This is where the p
 permalink: /adventures/
 ---
 <div class="pillars">
-  <div class="card">
-    <span class="icon" aria-hidden="true">🚴</span>
-    <h3>Cycling</h3>
-    <p>Miles on two wheels are where I do my best thinking, and a good way to turn a free afternoon into an adventure.</p>
+  <div class="card photo">
+    <img src="{{ '/assets/img/adventures/cycling.jpg' | relative_url }}" alt="Me and my road bike in front of a rushing waterfall" width="1000" height="753" loading="lazy">
+    <div class="body">
+      <h3>Cycling</h3>
+      <p>Miles on two wheels are where I do my best thinking, and a good way to turn a free afternoon into an adventure.</p>
+    </div>
   </div>
-  <div class="card">
-    <span class="icon" aria-hidden="true">🏔️</span>
-    <h3>Mountain biking</h3>
-    <p>Singletrack, roots, rocks, and the satisfaction of finally clearing a section that beat me last time.</p>
+  <div class="card photo">
+    <img src="{{ '/assets/img/adventures/mountain-biking.jpg' | relative_url }}" alt="Me and my mountain bike on a lookout deck above a forested valley" width="1000" height="753" loading="lazy">
+    <div class="body">
+      <h3>Mountain biking</h3>
+      <p>Singletrack, roots, rocks, and the satisfaction of finally clearing a section that beat me last time.</p>
+    </div>
   </div>
-  <div class="card">
-    <span class="icon" aria-hidden="true">⛺</span>
-    <h3>Weekend camping</h3>
-    <p>Pack the car on Friday, unplug, cook outside, and be back Sunday feeling like I took a week off.</p>
+  <div class="card photo">
+    <img src="{{ '/assets/img/adventures/camping.jpg' | relative_url }}" alt="A campsite in the woods with an awning off the van and a muddy mountain bike on the rack" width="1000" height="753" loading="lazy">
+    <div class="body">
+      <h3>Weekend camping</h3>
+      <p>Pack the car on Friday, unplug, cook outside, and be back Sunday feeling like I took a week off.</p>
+    </div>
   </div>
 </div>
 
